@@ -1,0 +1,238 @@
+// Add Made Coachella Font
+@font-face {
+  font-family: "Made Coachella";
+  src: url("../fonts/made-coachella.woff2");
+}
+
+// Color
+$gold: #d7b865;
+$black: #202020;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 2,
+  8: $spacer * 2.5,
+  9: $spacer * 5,
+);
+
+// Font Serif
+$font-serif: "Made Coachella", serif;
+
+// Font Family Base
+$font-family-base: "Source Sans 3", sans-serif;
+
+// Primary Color
+$primary: $gold;
+
+// Font Size
+$font-sizes: (
+  1: 2.5rem,
+  2: 2rem,
+  3: 1.5rem,
+  4: 1.25rem,
+  5: $spacer,
+  6: 875rem,
+  7: 0.75rem,
+);
+
+
+@import "../bootstrap/scss/bootstrap.scss";
+
+// Change Padding Select
+.nice-select {
+  width: 100%;
+  padding: $spacer * 0.75 $spacer;
+  font-size: 16px;
+  .current {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+  }
+
+  .nice-select-dropdown {
+    width: 100%;
+    ul {
+      margin: $spacer * 0.5 0;
+      .option {
+        line-height: 160%;
+      }
+    }
+  }
+}
+
+// Customizing Date Picker
+.flatpickr-current-month span.cur-month,
+.flatpickr-day {
+  color: #202020;
+}
+
+.flatpickr-day {
+  &.flatpickr-disabled,
+  &.flatpickr-disabled:hover {
+    color: #afafaf;
+  }
+
+  &.today,
+  &:hover {
+    background-color: $gold;
+    border-radius: initial;
+    border: none;
+    font-weight: 700;
+
+    &:hover {
+      border-color: none;
+      background: $gold;
+      color: #202020;
+    }
+  }
+}
+
+.font-serif {
+  font-family: $font-serif;
+}
+
+// Hero Section
+.hero {
+  height: 500px;
+  background: url("../images/Hero.png") no-repeat;
+  background-size: cover;
+
+  form {
+    .form-control {
+      padding: $spacer * 0.75 $spacer $spacer * 0.75 3rem;
+    }
+
+    select.location {
+      display: none;
+    }
+    .location {
+      li {
+        &:hover,
+        &:focus,
+        &.selected.focus {
+          background: $gold;
+        }
+
+        &.optgroup {
+          background: transparent !important;
+        }
+        &:first-child {
+          display: none;
+        }
+
+        &.optgroup {
+          color: #202020;
+          padding: 0 $spacer;
+        }
+      }
+    }
+
+    div:not(.increment-decrement) {
+      .location-container,
+      .date-container,
+      .room-container,
+      .promo-container {
+        svg {
+          position: absolute;
+          left: $spacer;
+          top: 50%;
+          transform: translateY(30%);
+          z-index: 1;
+
+          &.date-icon,
+          &.room-guest-icon,
+          &.promo-icon {
+            transform: translateY(-50%);
+          }
+
+          &.chevron-down {
+            left: inherit;
+            right: $spacer;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    .increment-decrement {
+      button {
+        width: 32px;
+        height: 32px;
+        border-color: #202020;
+        color: #202020;
+        &:disabled {
+          border-color: #C4C4C4;
+          color: #C4C4C4;
+        }
+        svg {
+          position: static !important;
+          transform: initial !important;
+        }
+      }
+    }
+
+    #view-button {
+      width: 160px;
+    }
+  }
+}
+
+// Carousel
+.swiper {
+  width: 100%;
+  height: auto;
+
+  .swiper-scrollbar {
+    width: 100%;
+    height: 3px;
+    margin-top: 2.5rem;
+    position: static;
+    background: #CFCFCF;
+
+    .swiper-scrollbar-drag {
+      background-color: $primary;
+    }
+  }
+}
+
+
+
+// Hotel Branch Section
+.hotel-branch-item {
+  display: block;
+  padding-bottom: $spacer;
+
+  &:hover {
+    svg {display: block !important;}
+  }
+}
+
+.branch-separator {
+  border: dashed 2px $primary;
+}
+
+.view-more-hotel {
+  display: block;
+  width: 160px;
+  color: #202020;
+  border: solid 1px #202020;
+  text-align: center;
+  padding: $spacer*.75 $spacer*1.25;
+  text-decoration: none;
+  font-weight: 700;
+  transition: ease-out .3s;
+
+  &:hover {
+    background: $primary;
+    border: none;
+  }
+}

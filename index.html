@@ -1,12 +1,831 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Mulia</title>
-    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <script type="text/javascript" src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/flatpickr-date-range.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./css/swiperjs.css" />
+    <link rel="stylesheet" href="./css/nice-select2.css" type="text/css" />
+    <link rel="stylesheet" href="./scss/custom-style.css" />
+  </head>
+  <body>
+    <!-- Start Navbar-->
+    <nav class="navbar navbar-expand-lg px-lg-8">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/Logo.png" alt="Logo" height="40" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-md-end gap-3"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Our Hotels</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mulia Privilege</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mulia Gift</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                English
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Indonesia</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+
+    <!-- Start Hero -->
+    <section class="hero p-8 text-white">
+      <h1 class="text-center font-serif">
+        Redefining Luxury in <br />
+        Bali & Jakarta
+      </h1>
+      <form
+        action=""
+        class="card row flex-lg-row align-items-center rounded-0 px-3 py-4 mt-5"
+      >
+        <div class="col-12 col-lg">
+          <div class="location-container form-group">
+            <label for="location">Location</label>
+
+            <div class="position-relative mt-1">
+              <i data-feather="briefcase" class="text-primary"></i>
+              <select class="location">
+                <option value="" disabled selected>Location</option>
+                <optgroup label="Jakarta" disabled>
+                  <option value="Hotel Mulia Senayan">
+                    Hotel Mulia Senayan
+                  </option>
+                  <option value="2">Suites at Hotel Mulia</option>
+                </optgroup>
+
+                <optgroup label="Bali" disabled>
+                  <option value="The Mulia">The Mulia</option>
+                  <option value="Mulia Resort">Mulia Resort</option>
+                  <option value="Mulia Villa">Mulia Villa</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg">
+          <div class="date-container form-group">
+            <label for="location">Date</label>
+
+            <div class="position-relative mt-2">
+              <i data-feather="calendar" class="date-icon text-primary"></i>
+              <input
+                type="text"
+                id="datepicker"
+                placeholder="Select date"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg">
+          <div class="room-container form-group">
+            <label for="location">Rooms and Guests</label>
+
+            <div class="position-relative mt-2">
+              <i data-feather="users" class="room-guest-icon text-primary"></i>
+              <i data-feather="chevron-down" class="chevron-down"></i>
+
+              <div class="dropdown">
+                <div
+                  id="total-place"
+                  class="position-relative form-control"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  <span class="total-room"></span>
+                  <span class="room">Room</span>
+                  <span class="rooms d-none">Rooms</span>
+                  ,
+                  <span class="total-adult"></span>
+                  <span class="adult">Adult</span>
+                  <span class="adults d-none">Adults</span>
+                  <span class="total-children d-none"></span>
+                  <span class="children d-none">Children</span>
+                  <span class="childrens d-none">Childrens</span>
+                </div>
+
+                <div class="dropdown-menu w-100 p-5" data-bs-autoClose="inside">
+                  <p class="my-0">Room, Adult, Child</p>
+
+                  <div class="d-flex flex-column row-gap-3 mt-5">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div>
+                        <p class="my-0">Room</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Rooms / Person</p>
+                      </div>
+
+                      <div
+                        class="increment-decrement d-flex align-items-center column-gap-3"
+                      >
+                        <button
+                          type="button"
+                          id="minus-room"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-room')"
+                          disabled
+                        >
+                          <i data-feather="minus"></i>
+                        </button>
+
+                        <p class="room-amount my-0 text-center"></p>
+
+                        <button
+                          type="button"
+                          id="add-room"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-room')"
+                        >
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <hr class="m-0" />
+
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div>
+                        <p class="my-0">Adult</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Adults / Room</p>
+                      </div>
+
+                      <div
+                        class="increment-decrement d-flex align-items-center column-gap-3"
+                      >
+                        <button
+                          type="button"
+                          id="minus-adult"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-adult')"
+                          disabled
+                        >
+                          <i data-feather="minus"></i>
+                        </button>
+
+                        <p class="adult-amount my-0 text-center"></p>
+
+                        <button
+                          type="button"
+                          id="add-adult"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-adult')"
+                        >
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <hr class="m-0" />
+
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div>
+                        <p class="my-0">Children</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Childrens / Room</p>
+                      </div>
+
+                      <div
+                        class="increment-decrement d-flex align-items-center column-gap-3"
+                      >
+                        <button
+                          type="button"
+                          id="minus-child"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-children')"
+                          disabled
+                        >
+                          <i data-feather="minus"></i>
+                        </button>
+
+                        <p class="children-amount my-0 text-center"></p>
+
+                        <button
+                          type="button"
+                          id="add-child"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-children')"
+                        >
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input For Room -->
+              <input type="hidden" name="room" />
+
+              <!-- Input For Adult -->
+              <input type="hidden" name="adult" />
+
+              <!-- Input For Children-->
+              <input type="hidden" name="children" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg">
+          <div class="form-group promo-container">
+            <label for="promo">Promo Code</label>
+            <div class="position-relative mt-2">
+              <i data-feather="edit" class="text-primary promo-icon"></i>
+              <input
+                type="text"
+                name="promo"
+                id="promo"
+                class="form-control"
+                placeholder="Promo Code"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-auto">
+          <button
+            type="button"
+            id="view-button"
+            class="btn btn-dark rounded-0 fw-bold text-primary"
+          >
+            View
+          </button>
+        </div>
+      </form>
+    </section>
+    <!-- End Hero-->
+
+    <!-- Start About -->
+    <section class="mt-8 px-9">
+      <h2 class="font-serif text-center">The Perfect Place For You To Stay</h2>
+      <p class="text-center mt-4">
+        Whether you're a business traveler exploring Jakarta or seeking to
+        indulge in luxury at our exquisite beachfront accommodation in Nusa Dua,
+        Bali, our exclusive hotel promotions await, promising unforgettable
+        experiences with our array of room deals and vacation packages.
+      </p>
+
+      <!-- Start Carousel -->
+      <div class="swiper my-8">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-1.png"
+              alt="Image 1"
+              class="object-fit-cover"
+              width="100%"
+              height="600"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-2.png"
+              alt="Image 2"
+              class="object-fit-cover"
+              width="100%"
+              height="600"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-3.png"
+              alt="Image 3"
+              class="object-fit-cover"
+              width="100%"
+              height="600"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-4.png"
+              alt="Image 4"
+              class="object-fit-cover"
+              width="100%"
+              height="600"
+            />
+          </div>
+        </div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <!-- End Carousel -->
+    </section>
+    <!-- End About -->
+
+    <!-- Start Hotel Branch-->
+    <div class="d-flex flex-column row-gap-8 mt-8 px-9">
+      <section class="d-flex align-items-center">
+        <div class="col-12 col-md-4">
+          <img
+            id="jakarta-image"
+            src="./images/jakarta-1.png"
+            alt="Mulia Jakarta"
+            width="100%"
+            height="564"
+          />
+        </div>
+
+        <div class="col-12 col-md-8 d-flex align-items-center">
+          <div class="w-75 ps-lg-8">
+            <h2 class="fs-3 font-serif">The Mulia Jakarta</h2>
+            <p class="mt-4 fs-4">
+              Located in the heart of Jakarta, Hotel Mulia Senayan brings luxury
+              accommodation to the next level. This Jakarta hotel offers the
+              ultimate grand experience with its Suites, featuring a 24-hour
+              on-call butler to take care of your every need
+            </p>
+
+            <a
+              href="#"
+              id="mulia-jakarta"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-8 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('jakarta-image', 'jakarta-2.png')"
+              onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')"
+            >
+              Hotel Mulia Senayan
+
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+
+            <a
+              href="#"
+              id="suites-hotel-mulia"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-4 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('jakarta-image', 'jakarta-3.png')"
+              onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')"
+            >
+              Suites at Hotel Mulia
+
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+
+            <a
+              href="#"
+              class="view-more-hotel mt-lg-7"
+              onmouseover="changeBranchImage('jakarta-image', 'jakarta-2.png')"
+              onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')"
+              >View More</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="d-flex align-items-center">
+        <div class="col-12 col-md-8 pr-lg-8 d-flex align-items-center">
+          <div class="w-75">
+            <h2 class="fs-3 font-serif">The Mulia Bali</h2>
+            <p class="mt-4 fs-4">
+              The Mulia Bali is the epitome of luxury, offering world class
+              amenities with unparalleled service and attention to detail. Our
+              expansive beachfront resort compound, located within the exclusive
+              area of Nusa Dua on the southern part of the island, allows you to
+              choose from three distinct experiences - luxurious suites, serene
+              villas and elegant rooms - overlooking the resort’s infinity pools
+              and pristine beach, inviting you to relax and indulge in paradise.
+            </p>
+
+            <a
+              href="#"
+              id="mulia-resort"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-8 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('bali-image', 'bali-2.png')"
+              onmouseleave="changeBranchImage('bali-image', 'bali-1.png')"
+            >
+              Mulia Resort
+
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+
+            <hr class="branch-separator m-0" />
+
+            <a
+              href="#"
+              id="mulia-villa"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-4 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('bali-image', 'bali-3.png')"
+              onmouseleave="changeBranchImage('bali-image', 'bali-1.png')"
+            >
+              Mulia Villa
+
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+
+            <a
+              href="#"
+              class="view-more-hotel mt-lg-7"
+              onmouseover="changeBranchImage('bali-image', 'bali-4.png')"
+              onmouseleave="changeBranchImage('bali-image', 'bali-1.png')"
+              >View More</a
+            >
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <img
+            id="bali-image"
+            src="./images/bali-1.png"
+            alt="Mulia Bali"
+            width="100%"
+            height="564"
+          />
+        </div>
+      </section>
+    </div>
+    <!-- End Hotel Branch-->
+
+    <!-- Start Hotel Restaurant-->
+    <section class="mt-8 px-9">
+      <h2 class="fs-2 font-serif text-center">Discover Culinary At The Mulia</h2>
+      <p class="text-center fs-4">Enjoy delicious food from quality ingredients in a luxurious atmosphere at The Mulia Nusa Dua and Jakarta.</p>
+    </section>
+    <!-- End Hotel Restaurant-->
+    <script src="./js/flatpickr-date-range.js" type="text/javascript"></script>
+    <script src="./js/feather-icon.min.js" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="./bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script src="./js/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src="./js/nice-select2.js"></script>
+    <script>
+      // Load Feather Icon
+      document.addEventListener("DOMContentLoaded", function () {
+        feather.replace(); // Replace <i> tags with Feather Icons
+
+        // Set Default Current Room, Adult, Children Amount
+        document.querySelector(".room-amount").innertext = 1;
+        document.querySelector(".adult-amount").innertext = 1;
+        document.querySelector(".children-amount").innertext = 0;
+      });
+
+      let option = { placeholder: "Location" };
+      NiceSelect.bind(document.querySelector(".location"), option);
+
+      // Create Date Picker
+      flatpickr("#datepicker", {
+        mode: "range",
+        dateFormat: "d/m/Y", // Date format (Wednesday 30 April 2024)
+        minDate: "today", // Minimum selectable date is today
+        maxDate: new Date().fp_incr(30), // Maximum selectable date is 30 days from today
+        allowInput: true, // Allow manual input of date
+        showMonths: 2,
+      });
+
+      let roomAmount = 1;
+      let adultAmount = 1;
+      let childAmount = 0;
+
+      // Set Default Amount of Room, Adult, Children
+      document.querySelector(".room-amount").innerText = roomAmount;
+      document.querySelector(".adult-amount").innerText = adultAmount;
+      document.querySelector(".children-amount").innerText = childAmount;
+      document.querySelector(".total-room").innerText = roomAmount;
+      document.querySelector(".total-adult").innerText = adultAmount;
+
+      // Add Amount For Room, Adult, Children
+      function addAmount(addType) {
+        if (addType == "add-room") {
+          if (roomAmount < 4) {
+            if (document.getElementById("add-room").hasAttribute("disabled")) {
+              document.getElementById("add-room").removeAttribute("disabled");
+            }
+            roomAmount += 1;
+            document.querySelector(".room-amount").innerText = roomAmount;
+            document.querySelector("#total-place .total-room").innerText =
+              roomAmount;
+            document.querySelector('input[name="room"]').value = roomAmount;
+
+            if (roomAmount > 1) {
+              console.log("mausk");
+              document
+                .querySelector("#total-place .room")
+                .classList.add("d-none");
+              document
+                .querySelector("#total-place .rooms")
+                .classList.remove("d-none");
+            } else {
+              document
+                .querySelector("#total-place .room")
+                .classList.remove("d-none");
+              document
+                .querySelector("#total-place .rooms")
+                .classList.add("d-none");
+            }
+          }
+
+          if (roomAmount == 4) {
+            document
+              .getElementById("add-room")
+              .setAttribute("disabled", "disabled");
+          }
+
+          if (roomAmount > 1 && roomAmount <= 4) {
+            document.getElementById("minus-room").removeAttribute("disabled");
+          }
+        } else if (addType == "add-adult") {
+          if (adultAmount < 4) {
+            if (document.getElementById("add-adult").hasAttribute("disabled")) {
+              document.getElementById("add-adult").removeAttribute("disabled");
+            }
+
+            adultAmount += 1;
+            document.querySelector(".adult-amount").innerText = adultAmount;
+            document.querySelector("#total-place .total-adult").innerText =
+              adultAmount;
+            document.querySelector('input[name="adult"]').value = adultAmount;
+
+            if (adultAmount > 1) {
+              document
+                .querySelector("#total-place .adult")
+                .classList.add("d-none");
+              document
+                .querySelector("#total-place .adults")
+                .classList.remove("d-none");
+            } else {
+              document
+                .querySelector("#total-place .adult")
+                .classList.remove("d-none");
+              document
+                .querySelector("#total-place .adults")
+                .classList.add("d-none");
+            }
+          }
+
+          if (adultAmount == 4) {
+            document
+              .getElementById("add-adult")
+              .setAttribute("disabled", "disabled");
+          }
+
+          if (adultAmount > 0 && adultAmount <= 4) {
+            document.getElementById("minus-adult").removeAttribute("disabled");
+          }
+        } else if (addType == "add-children") {
+          if (childAmount < 4) {
+            if (document.getElementById("add-child").hasAttribute("disabled")) {
+              document.getElementById("add-child").removeAttribute("disabled");
+            }
+
+            childAmount += 1;
+            document.querySelector(".children-amount").innerText = childAmount;
+            document.querySelector(".total-children").innerText =
+              ", " + childAmount;
+            document.querySelector('input[name="children"]').value =
+              childAmount;
+
+            childAmount > 0
+              ? document
+                  .querySelector("#total-place .total-children")
+                  .classList.remove("d-none")
+              : document
+                  .querySelector("#total-place .total-children")
+                  .classList.add("d-none");
+
+            if (childAmount > 1) {
+              document
+                .querySelector("#total-place .children")
+                .classList.add("d-none");
+              document
+                .querySelector("#total-place .childrens")
+                .classList.remove("d-none");
+            } else {
+              document
+                .querySelector("#total-place .children")
+                .classList.remove("d-none");
+              document
+                .querySelector("#total-place .childrens")
+                .classList.add("d-none");
+            }
+          }
+
+          if (childAmount == 4) {
+            document
+              .getElementById("add-child")
+              .setAttribute("disabled", "disabled");
+          }
+
+          if (childAmount > 0 && childAmount <= 4) {
+            document.getElementById("minus-child").removeAttribute("disabled");
+          }
+        }
+      }
+
+      function minusAmount(addType) {
+        if (addType == "minus-room") {
+          if (roomAmount > 0) {
+            if (
+              document.getElementById("minus-room").hasAttribute("disabled")
+            ) {
+              document.getElementById("minus-room").removeAttribute("disabled");
+            }
+            roomAmount -= 1;
+            document.querySelector(".room-amount").innerText = roomAmount;
+            document.querySelector("#total-place .total-room").innerText =
+              roomAmount;
+            document.querySelector('input[name="room"]').value = roomAmount;
+
+            if (roomAmount == 1) {
+              document
+                .querySelector("#total-place .rooms")
+                .classList.add("d-none");
+              document
+                .querySelector("#total-place .room")
+                .classList.remove("d-none");
+            } else {
+              document
+                .querySelector("#total-place .rooms")
+                .classList.remove("d-none");
+              document
+                .querySelector("#total-place .room")
+                .classList.add("d-none");
+            }
+          }
+
+          if (roomAmount == 1) {
+            document
+              .getElementById("minus-room")
+              .setAttribute("disabled", "disabled");
+          }
+
+          if (roomAmount > 0 && roomAmount <= 4) {
+            document.getElementById("add-room").removeAttribute("disabled");
+          }
+        } else if (addType == "minus-adult") {
+          if (adultAmount > 1) {
+            if (
+              document.getElementById("minus-adult").hasAttribute("disabled")
+            ) {
+              document
+                .getElementById("minus-adult")
+                .removeAttribute("disabled");
+            }
+
+            adultAmount -= 1;
+            document.querySelector(".adult-amount").innerText = adultAmount;
+            document.querySelector("#total-place .total-adult").innerText =
+              adultAmount;
+            document.querySelector('input[name="adult"]').value = adultAmount;
+
+            if (adultAmount == 1) {
+              document
+                .querySelector("#total-place .adult")
+                .classList.remove("d-none");
+              document
+                .querySelector("#total-place .adults")
+                .classList.add("d-none");
+            } else {
+              document
+                .querySelector("#total-place .adult")
+                .classList.add("d-none");
+              document
+                .querySelector("#total-place .adults")
+                .classList.remove("d-none");
+            }
+          }
+
+          if (adultAmount == 1) {
+            document
+              .getElementById("minus-adult")
+              .setAttribute("disabled", "disabled");
+          }
+
+          if (adultAmount > 0 && adultAmount <= 4) {
+            document.getElementById("add-adult").removeAttribute("disabled");
+          }
+        } else if (addType == "minus-children") {
+          if (childAmount > 0) {
+            if (
+              document.getElementById("minus-child").hasAttribute("disabled")
+            ) {
+              document
+                .getElementById("minus-child")
+                .removeAttribute("disabled");
+            }
+
+            childAmount -= 1;
+            document.querySelector(".children-amount").innerText = childAmount;
+            document.querySelector("#total-place .total-children").innerText =
+              ", " + childAmount;
+            document.querySelector('input[name="children"]').value =
+              childAmount;
+
+            if (childAmount > 1) {
+              document
+                .querySelector("#total-place .childrens")
+                .classList.remove("d-none");
+              document
+                .querySelector("#total-place .children")
+                .classList.add("d-none");
+            } else {
+              document
+                .querySelector("#total-place .childrens")
+                .classList.add("d-none");
+              document
+                .querySelector("#total-place .children")
+                .classList.remove("d-none");
+            }
+          }
+
+          if (childAmount == 0) {
+            document
+              .getElementById("minus-child")
+              .setAttribute("disabled", "disabled");
+            document
+              .querySelector("#total-place .total-children")
+              .classList.add("d-none");
+            document
+              .querySelector("#total-place .children")
+              .classList.add("d-none");
+            document
+              .querySelector("#total-place .childrens")
+              .classList.add("d-none");
+          }
+
+          if (childAmount > 0 && childAmount <= 4) {
+            document.getElementById("add-child").removeAttribute("disabled");
+          }
+        }
+      }
+
+      // Carousel
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        autoplay: {
+          delay: 3000
+        }
+      });
+
+      // Change Branch Image When Hovering
+      function changeBranchImage(image, imageFile) {
+        document
+          .getElementById(image)
+          .setAttribute("src", "./images/" + imageFile);
+      }
+    </script>
+  </body>
 </html>
