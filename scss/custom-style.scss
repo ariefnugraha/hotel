@@ -39,7 +39,7 @@ $font-sizes: (
   3: 1.5rem,
   4: 1.25rem,
   5: $spacer,
-  6: 875rem,
+  6: .875rem,
   7: 0.75rem,
 );
 
@@ -93,6 +93,15 @@ $font-sizes: (
       background: $gold;
       color: #202020;
     }
+  }
+
+  &.selected.startRange,
+  &.startRange.startRange,
+  &.endRange {
+    background-color: $gold;
+    color: $black;
+    border-color: $gold;
+    font-weight: 600;
   }
 }
 
@@ -235,4 +244,128 @@ $font-sizes: (
     background: $primary;
     border: none;
   }
+}
+
+// Restaurant Section
+.explore-all-restaurant:hover {
+  background-color: $gold;
+  border-color: $gold !important;
+  transition: .5s;
+}
+
+// Event Carousel
+
+.swiper-event {
+  .event-box {
+    width: 500px;
+    height: 450px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4), 0px 0px 16px 0px rgba(0, 0, 0, 0.8);
+    transform: translateY(-60%);
+    left: 20%;
+    top: 60%;
+
+    h3 {
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 122px;
+        height: 2px;
+        background-color: $gold;
+        display: block;
+        position: relative;
+        top: .75rem;
+      }
+    }
+  }
+
+  .event-icon {
+    width: 120px;
+    min-height: 140px;
+    border: solid 6px $gold;
+    border-radius: 100px;
+    padding: .5rem;
+
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    flex-basis: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    &::after {display: none;}
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+}
+
+// Loading State
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 9999;
+
+  &.hide {
+    animation: hide-loading 5s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .loading-animation {
+    width: 200px;
+    height: 3px;
+    background: #e4e4e4;
+    margin-top: 16px;
+    overflow: hidden;
+
+    .loading-animation-child {
+      background: $primary;
+      width: 80px;
+      height: 3px;
+      background: $gold;
+      animation: loading-progress 3s linear infinite;
+    }
+  }
+
+  @keyframes loading-progress {
+    0% {
+      transform: translateX(-50px);
+    }
+
+    100% {
+      transform: translateX(250px);
+    }
+  }
+
+  @keyframes hide-loading {
+    0% {
+      transform: none;
+    }
+
+    100% {
+      transform: translateY(1000%);
+      z-index: -1;
+      display:none;
+    }
+  }
+
 }
