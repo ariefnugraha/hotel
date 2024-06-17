@@ -259,7 +259,7 @@ $font-sizes: (
   .event-box {
     width: 500px;
     height: 450px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4), 0px 0px 16px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translateY(-60%);
     left: 20%;
     top: 60%;
@@ -368,4 +368,56 @@ $font-sizes: (
     }
   }
 
+}
+
+// Media Query
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+  }
+
+  #bali-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-event {
+    .swiper-button-next,
+    .swiper-button-prev {
+      flex-basis: 30px;
+      height: 30px;
+
+      svg {
+        width: 15px !important;
+        height: 15px !important;
+      }
+    }
+
+    .event-icon {
+      top:-60px !important;
+      left: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hotel-image {
+    img {
+      height: 300px;
+    }
+  }
+  .swiper-event {
+    .event-box {
+      position: static !important;
+      transform: initial;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+
+      img {
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
 }

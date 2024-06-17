@@ -35,7 +35,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-md-end gap-3" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse justify-content-md-end gap-3 pt-4 pt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav column-gap-4">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Our Hotels</a>
@@ -65,12 +65,12 @@
   <!-- End Navbar-->
 
   <!-- Start Hero -->
-  <section class="hero d-flex flex-column justify-content-center p-8 text-white">
+  <section class="hero d-flex flex-column justify-content-center p-8 mt-9 mt-lg-0 text-white">
     <h1 class="text-center font-serif">
       Redefining Luxury in <br />
       Bali & Jakarta
     </h1>
-    <form action="" class="card row flex-lg-row align-items-center rounded-0 px-3 py-4 mt-5">
+    <form action="" class="card row flex-lg-row align-items-center rounded-0 px-3 py-4 mt-5 row-gap-4">
       <div class="col-12 col-lg">
         <div class="location-container form-group">
           <label for="location">Location</label>
@@ -222,7 +222,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-lg">
+      <!-- <div class="col-12 col-lg">
         <div class="form-group promo-container">
           <label for="promo">Promo Code</label>
           <div class="position-relative mt-2">
@@ -230,10 +230,10 @@
             <input type="text" name="promo" id="promo" class="form-control" placeholder="Promo Code" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="col-12 col-lg-auto">
-        <button type="button" id="view-button" class="btn btn-dark rounded-0 fw-bold text-primary">
+        <button type="button" id="view-button" class="btn w-100 btn-dark rounded-0 fw-bold text-primary">
           View
         </button>
       </div>
@@ -242,7 +242,7 @@
   <!-- End Hero-->
 
   <!-- Start About -->
-  <section class="mt-8 px-9">
+  <section class="mt-8 px-4 px-lg-9">
     <h2 class="font-serif text-center">The Perfect Place For You To Stay</h2>
     <p class="text-center mt-4 fs-4">
       Whether you're a business traveler exploring Jakarta or seeking to
@@ -277,15 +277,15 @@
   <!-- End About -->
 
   <!-- Start Hotel Branch-->
-  <div class="d-flex flex-column row-gap-8 mt-8 px-9">
-    <section class="d-flex align-items-center">
+  <div class="d-flex flex-column row-gap-8 mt-8 px-4 px-lg-9">
+    <section class="d-flex flex-column flex-md-row align-items-lg-center row-gap-4">
       <div class="col-12 col-md-5">
         <img id="jakarta-image" src="./images/jakarta-1.png" alt="Mulia Jakarta" class="img-fluid" width="476"
           height="564" />
       </div>
 
       <div class="col-12 col-md-7 d-flex align-items-center">
-        <div class="w-75 ps-lg-8">
+        <div class="w-75 ps-md-6 ps-lg-8 flex-grow-1 flex-lg-grow-0">
           <h2 class="fs-3 font-serif">The Mulia Jakarta</h2>
           <p class="mt-4 fs-4">
             Located in the heart of Jakarta, Hotel Mulia Senayan brings luxury
@@ -320,9 +320,9 @@
       </div>
     </section>
 
-    <section class="d-flex align-items-center">
-      <div class="col-12 col-md-7 pr-lg-8 d-flex align-items-center">
-        <div class="w-75">
+    <section class="d-flex flex-column flex-md-row align-items-lg-center row-gap-4">
+      <div class="col-12 col-md-7 pr-lg-8 d-flex align-items-center order-2 order-md-1">
+        <div class="w-75 flex-grow-1 flex-lg-grow-0 pe-md-6 pe-lg-0">
           <h2 class="fs-3 font-serif">The Mulia Bali</h2>
           <p class="mt-4 fs-4">
             The Mulia Bali is the epitome of luxury, offering world class
@@ -359,7 +359,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5 order-1 order-md-2">
         <img id="bali-image" src="./images/bali-1.png" alt="Mulia Bali" width="480" height="564" />
       </div>
     </section>
@@ -367,15 +367,15 @@
   <!-- End Hotel Branch-->
 
   <!-- Start Hotel Restaurant-->
-  <section class="mt-8 px-9">
+  <section class="mt-8 px-4 px-lg-9">
     <h2 class="fs-2 font-serif text-center">Taste Amazing Culinary At The Mulia</h2>
     <p class="text-center fs-4">Enjoy delicious culinary from quality ingredients in a luxurious atmosphere at The Mulia
       Nusa Dua and Jakarta.</p>
 
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row row-gap-4">
       <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/jakarta/thecafe" target="_blank">
-          <img src="./images/the-cafe.webp" alt="The Cafe Jakarta" class="img-fluid" width="305" height="305">
+        <a href="https://muliadining.com/jakarta/thecafe" target="_blank" class="w-100">
+          <img src="./images/the-cafe.webp" alt="The Cafe Jakarta" class="img-fluid w-100" width="305" height="305">
         </a>
 
         <h3 class="font-serif fs-4 mt-4 mb-1">
@@ -386,8 +386,8 @@
       </div>
 
       <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/jakarta/Table8" target="_blank">
-          <img src="./images/table-8.webp" alt="Table8 Jakarta" class="img-fluid" width="305" height="305">
+        <a href="https://muliadining.com/jakarta/Table8" target="_blank" class="w-100">
+          <img src="./images/table-8.webp" alt="Table8 Jakarta" class="img-fluid w-100" width="305" height="305">
         </a>
 
         <h3 class="font-serif fs-4 mt-4 mb-1">
@@ -398,8 +398,8 @@
       </div>
 
       <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/bali/cascadelounge" target="_blank">
-          <img src="./images/cascade-lounge.webp" alt="Cascade Lounge Bali" class="img-fluid" width="305" height="305">
+        <a href="https://muliadining.com/bali/cascadelounge" target="_blank" class="w-100">
+          <img src="./images/cascade-lounge.webp" alt="Cascade Lounge Bali" class="img-fluid w-100" width="305" height="305">
         </a>
 
         <h3 class="font-serif fs-4 mt-4 mb-1">
@@ -410,8 +410,8 @@
       </div>
 
       <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/bali/soleil" target="_blank">
-          <img src="./images/soleil.webp" alt="Soleil Bali" class="img-fluid" width="305" height="305">
+        <a href="https://muliadining.com/bali/soleil" target="_blank" class="w-100">
+          <img src="./images/soleil.webp" alt="Soleil Bali" class="img-fluid w-100" width="305" height="305">
         </a>
 
         <h3 class="font-serif fs-4 mt-4 mb-1">
@@ -431,7 +431,7 @@
   <!-- End Hotel Restaurant-->
 
   <!-- Start Event-->
-  <section class="mt-8 px-9">
+  <section class="mt-8 px-4 px-lg-9">
     <h2 class="fs-2 font-serif text-center">Make Your Event With Us</h2>
     <p class="text-center fs-4">We offer a place, facilities, and also a luxurious and excellent service for your event
       needs</p>
@@ -442,9 +442,9 @@
         <div class="swiper-slide">
           <div class="position-relative">
             <img src="./images/wedding-event.webp" alt="Wedding Event"
-              class="event-image position-relative d-block ms-lg-6 mt-6" width="494" height="590" />
+              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
 
-            <div class="event-box d-flex flex-column align-items-start bg-white p-8 position-absolute">
+            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
               <h3 class="pb-3 font-serif fs-3">Wedding</h3>
               <p class="mt-5 flex-grow-1">Create a cherished and unforgettable memory on your wedding day, surrounded by your
                 beloved
@@ -472,9 +472,9 @@
         <div class="swiper-slide">
           <div class="position-relative">
             <img src="./images/meeting-event.webp" alt="Meeting Event"
-              class="event-image position-relative d-block ms-lg-6 mt-6" width="494" height="590" />
+              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
 
-            <div class="event-box d-flex flex-column align-items-start bg-white p-8 position-absolute">
+            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
               <h3 class="pb-3 font-serif fs-3">Meeting</h3>
               <p class="mt-5 flex-grow-1">Host your next meeting at The Mulia, where luxury meets functionality. Our spacious and
                 elegant facilities are tailored to accommodate your needs, providing an exquisite setting for productive
@@ -502,9 +502,9 @@
         <div class="swiper-slide">
           <div class="position-relative">
             <img src="./images/seminar-event.webp" alt="Seminar Event"
-              class="event-image position-relative d-block ms-lg-6 mt-6" width="494" height="590" />
+              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
 
-            <div class="event-box d-flex flex-column align-items-start bg-white p-8 position-absolute">
+            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
               <h3 class="pb-3 font-serif fs-3">Seminar / Conference</h3>
               <p class="mt-5 flex-grow-1">Enhance your seminar with our luxurious and spacious facilities. With ample room capacity,
                 we offer the perfect venue to accommodate large gatherings, ensuring a professional and comfortable
@@ -530,9 +530,9 @@
         <div class="swiper-slide">
           <div class="position-relative">
             <img src="./images/private-event.webp" alt="Private Event"
-              class="event-image position-relative d-block ms-lg-6 mt-6" width="494" height="590" />
+              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
 
-            <div class="event-box d-flex flex-column align-items-start bg-white p-8 position-absolute">
+            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
               <h3 class="pb-3 font-serif fs-3">Private Events</h3>
               <p class="mt-5 flex-grow-1">Celebrate special moments with loved ones with The Mulia. From birthday parties, prom
                 nights, family events, and other events. At The Mulia you will get luxurious and large facilities to
@@ -567,11 +567,11 @@
   <!-- Start Footer -->
   <footer class="border-top py-6">
     <div class="container">
-      <div class="row">
+      <div class="row flex-column flex-md-row row-gap-4">
         <a href="index.html" class="col-2">
           <img src="./images/Logo.png" alt="The Mulia Logo" width="80" height="50">
         </a>
-        <div class="col d-flex justify-content-center column-gap-7 row-gap-3">
+        <div class="col-lg d-flex flex-column flex-lg-row justify-content-center column-gap-7 row-gap-3">
           <div>
             <p class="text-primary fw-bold m-0">Hotel Mulia Senayan, Jakarta</p>
             <p class="m-0 text-secondary">Jl. Asia Afrika Senayan <br/>
@@ -595,7 +595,7 @@
         <p class="text-center font-serif fw-semibold text-primary m-0">Subscribe to Our Newsletter</p>
         <p class="text-center">The latest offers & news updates straight to your inbox.</p>
 
-        <form class="row">
+        <form class="row flex-column flex-lg-row row-gap-4">
           <div class="col">
             <input type="email" name="email" id="email" class="form-control rounded-0" placeholder="Your Email">
           </div>
@@ -604,12 +604,12 @@
             <input type="text" name="name" id="name" class="form-control rounded-0" placeholder="Your Name">
           </div>
 
-          <div class="col-2">
+          <div class="col col-lg-2">
             <button type="submit" class="btn btn-primary w-100 fw-bold rounded-0">Subscribe</button>
           </div>
         </form>
 
-        <div class="row justify-content-between mt-4 fs-6">
+        <div class="row flex-column flex-lg-row justify-content-lg-between mt-4 fs-6 row-gap-4">
           <div class="col d-flex column-gap-4">
             <a href="https://mulia.link/mzz">
               <img src="./images/instagram.svg" alt="Instagram" width="20" height="20">
@@ -625,7 +625,7 @@
             </a>
           </div>
 
-          <div class="col d-flex column-gap-4">
+          <div class="col d-flex flex-column flex-lg-row column-gap-4 row-gap-1">
             <a href="https://www.themulia.com/mulia-gift" class="text-decoration-none text-dark">Mulia Gift</a>
 
             <a href="https://www.themulia.com/careers" class="text-decoration-none text-dark">Careers</a>
@@ -635,7 +635,7 @@
             <a href="https://www.themulia.com/awards-accolades" class="text-decoration-none text-dark">Awards & Accolades</a>
           </div>
 
-          <div class="col text-end">© 2024 PT. Mulia Graha Tatalestari. All rights reserved</div>
+          <div class="col text-center text-lg-end">© 2024 PT. Mulia Graha Tatalestari. All rights reserved</div>
         </div>
       </div>
     </div>
@@ -964,14 +964,25 @@
     const eventCarousel = new Swiper('.swiper-event', {
       direction: "horizontal",
       loop: true,
-      slidesPerView: 1.5,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       scrollbar: { el: ".swiper-scrollbar" },
-      autoplay: {
-        delay: 3000
+      // autoplay: {
+      //   delay: 3000
+      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+        768: {
+          slidesPerView: 1.2,
+          spaceBetween: 80
+        },
+        992: {
+          slidesPerView: 1.5
+        }
       }
     })
 

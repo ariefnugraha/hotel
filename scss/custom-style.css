@@ -13757,7 +13757,7 @@ textarea.form-control-lg {
 .swiper-event .event-box {
   width: 500px;
   height: 450px;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4), 0px 0px 16px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translateY(-60%);
   left: 20%;
   top: 60%;
@@ -13853,5 +13853,46 @@ textarea.form-control-lg {
     transform: translateY(1000%);
     z-index: -1;
     display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+  }
+  #bali-image {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-event .swiper-button-next,
+  .swiper-event .swiper-button-prev {
+    flex-basis: 30px;
+    height: 30px;
+  }
+  .swiper-event .swiper-button-next svg,
+  .swiper-event .swiper-button-prev svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .swiper-event .event-icon {
+    top: -60px !important;
+    left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .hotel-image img {
+    height: 300px;
+  }
+  .swiper-event .event-box {
+    position: static !important;
+    transform: initial;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+  .swiper-event .event-box img {
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }/*# sourceMappingURL=custom-style.css.map */
