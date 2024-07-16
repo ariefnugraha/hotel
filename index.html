@@ -12,6 +12,23 @@
   <link rel="stylesheet" href="./css/swiperjs.css" />
   <link rel="stylesheet" href="./css/nice-select2.css" type="text/css" />
   <link rel="stylesheet" href="./scss/custom-style.css" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <!-- Hotjar Tracking Code for Hotel The Mulia -->
 <script>
   (function(h,o,t,j,a,r){
@@ -26,19 +43,11 @@
 </head>
 
 <body>
-  <!-- Start Loading -->
-  <div class="loading-container">
-    <img src="./images/Logo.png" width="80" height="50">
-    <div class="loading-animation">
-      <div class="loading-animation-child"></div>
-    </div>
-  </div>
-  <!-- End Loading -->
 
 
   <!-- Start Navbar-->
   <nav class="navbar navbar-expand-lg px-lg-8 fixed-top bg-white border-bottom">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="./images/Logo.png" alt="Logo" height="40" />
       </a>
@@ -76,504 +85,772 @@
   <!-- End Navbar-->
 
   <!-- Start Hero -->
-  <section class="hero d-flex flex-column justify-content-center p-8 mt-9 mt-lg-0 text-white">
-    <h1 class="text-center font-serif">
-      Redefining Luxury in <br />
-      Bali & Jakarta
-    </h1>
-    <form action="" class="card row flex-lg-row align-items-center rounded-0 px-3 py-4 mt-5 row-gap-4">
-      <div class="col-12 col-lg">
-        <div class="location-container form-group">
-          <label for="location">Location</label>
-
-          <div class="position-relative mt-1">
-            <i data-feather="briefcase" class="text-primary"></i>
-            <select class="location">
-              <option value="" disabled selected>Location</option>
-              <optgroup label="Jakarta" disabled>
-                <option value="Hotel Mulia Senayan">
-                  Hotel Mulia Senayan
-                </option>
-                <option value="2">Suites at Hotel Mulia</option>
-              </optgroup>
-
-              <optgroup label="Bali" disabled>
-                <option value="The Mulia">The Mulia</option>
-                <option value="Mulia Resort">Mulia Resort</option>
-                <option value="Mulia Villa">Mulia Villa</option>
-              </optgroup>
-            </select>
+  <section class="hero d-flex p-8 mt-8 mt-lg-0 text-white">
+    <div class="container d-flex flex-column justify-content-between">
+      <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+        <h1 class="text-center font-serif">
+          Redefining Luxury in <br />
+          Bali & Jakarta
+        </h1>
+      </div>
+      <form action="" class="reservation-form card row d-none d-lg-flex flex-lg-row align-items-center rounded-0 px-3 py-4 mt-5 row-gap-4">
+        <div class="col-12 col-lg">
+          <div class="location-container form-group">
+            <label for="location">Location</label>
+  
+            <div class="position-relative mt-1">
+              <i data-feather="briefcase" class="text-primary"></i>
+              <select class="location">
+                <option value="" disabled selected>Location</option>
+                <optgroup label="Jakarta" disabled>
+                  <option value="Hotel Mulia Senayan">
+                    Hotel Mulia Senayan
+                  </option>
+                  <option value="2">Suites at Hotel Mulia</option>
+                </optgroup>
+  
+                <optgroup label="Bali" disabled>
+                  <option value="The Mulia">The Mulia</option>
+                  <option value="Mulia Resort">Mulia Resort</option>
+                  <option value="Mulia Villa">Mulia Villa</option>
+                </optgroup>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-12 col-lg">
-        <div class="date-container form-group">
-          <label for="location">Date</label>
-
-          <div class="position-relative mt-2">
-            <i data-feather="calendar" class="date-icon text-primary"></i>
-            <input type="text" id="datepicker" placeholder="Select date" class="form-control" />
+  
+        <div class="col-12 col-lg">
+          <div class="date-container form-group">
+            <label for="location">Date</label>
+  
+            <div class="position-relative mt-2">
+              <i data-feather="calendar" class="date-icon text-primary"></i>
+              <input type="text" id="datepicker" placeholder="Select date" class="form-control" />
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-12 col-lg">
-        <div class="room-container form-group">
-          <label for="location">Rooms and Guests</label>
-
-          <div class="position-relative mt-2">
-            <i data-feather="users" class="room-guest-icon text-primary"></i>
-            <i data-feather="chevron-down" class="chevron-down"></i>
-
-            <div class="dropdown">
-              <div id="total-place" class="position-relative form-control" type="button" data-bs-toggle="dropdown"
-                data-bs-auto-close="outside" aria-expanded="false">
-                <span class="total-room"></span>
-                <span class="room">Room</span>
-                <span class="rooms d-none">Rooms</span>
-                ,
-                <span class="total-adult"></span>
-                <span class="adult">Adult</span>
-                <span class="adults d-none">Adults</span>
-                <span class="total-children d-none"></span>
-                <span class="children d-none">Child</span>
-                <span class="childrens d-none">Childs</span>
-              </div>
-
-              <div class="dropdown-menu w-100 p-5" data-bs-autoClose="inside">
-                <p class="my-0">Room, Adult, Child</p>
-
-                <div class="d-flex flex-column row-gap-3 mt-5">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div>
-                      <p class="my-0">Room</p>
-                      <p class="my-0 fw-light fs-7">Max 4 Rooms / Person</p>
+  
+        <div class="col-12 col-lg">
+          <div class="room-container form-group">
+            <label for="location">Rooms and Guests</label>
+  
+            <div class="position-relative mt-2">
+              <i data-feather="users" class="room-guest-icon text-primary"></i>
+              <i data-feather="chevron-down" class="chevron-down"></i>
+  
+              <div class="dropdown">
+                <div id="total-place" class="position-relative form-control" type="button" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside" aria-expanded="false">
+                  <span class="total-room"></span>
+                  <span class="room">Room</span>
+                  <span class="rooms d-none">Rooms</span>
+                  ,
+                  <span class="total-adult"></span>
+                  <span class="adult">Adult</span>
+                  <span class="adults d-none">Adults</span>
+                  <span class="total-children d-none"></span>
+                  <span class="children d-none">Child</span>
+                  <span class="childrens d-none">Childs</span>
+                </div>
+  
+                <div class="dropdown-menu w-100 p-5" data-bs-autoClose="inside">
+                  <p class="my-0">Room, Adult, Child</p>
+  
+                  <div class="d-flex flex-column row-gap-3 mt-5">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="my-0">Room</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Rooms / Person</p>
+                      </div>
+  
+                      <div class="increment-decrement d-flex align-items-center column-gap-3">
+                        <button type="button" id="minus-room"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-room')" disabled>
+                          <i data-feather="minus"></i>
+                        </button>
+  
+                        <p class="room-amount my-0 text-center"></p>
+  
+                        <button type="button" id="add-room"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-room')">
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
                     </div>
-
-                    <div class="increment-decrement d-flex align-items-center column-gap-3">
-                      <button type="button" id="minus-room"
-                        class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
-                        onclick="minusAmount('minus-room')" disabled>
-                        <i data-feather="minus"></i>
-                      </button>
-
-                      <p class="room-amount my-0 text-center"></p>
-
-                      <button type="button" id="add-room"
-                        class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
-                        onclick="addAmount('add-room')">
-                        <i data-feather="plus"></i>
-                      </button>
+  
+                    <hr class="m-0" />
+  
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="my-0">Adult</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Adults / Room</p>
+                      </div>
+  
+                      <div class="increment-decrement d-flex align-items-center column-gap-3">
+                        <button type="button" id="minus-adult"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-adult')" disabled>
+                          <i data-feather="minus"></i>
+                        </button>
+  
+                        <p class="adult-amount my-0 text-center"></p>
+  
+                        <button type="button" id="add-adult"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-adult')">
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
                     </div>
-                  </div>
-
-                  <hr class="m-0" />
-
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div>
-                      <p class="my-0">Adult</p>
-                      <p class="my-0 fw-light fs-7">Max 4 Adults / Room</p>
-                    </div>
-
-                    <div class="increment-decrement d-flex align-items-center column-gap-3">
-                      <button type="button" id="minus-adult"
-                        class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
-                        onclick="minusAmount('minus-adult')" disabled>
-                        <i data-feather="minus"></i>
-                      </button>
-
-                      <p class="adult-amount my-0 text-center"></p>
-
-                      <button type="button" id="add-adult"
-                        class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
-                        onclick="addAmount('add-adult')">
-                        <i data-feather="plus"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <hr class="m-0" />
-
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div>
-                      <p class="my-0">Children</p>
-                      <p class="my-0 fw-light fs-7">Max 4 Childrens / Room</p>
-                    </div>
-
-                    <div class="increment-decrement d-flex align-items-center column-gap-3">
-                      <button type="button" id="minus-child"
-                        class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
-                        onclick="minusAmount('minus-children')" disabled>
-                        <i data-feather="minus"></i>
-                      </button>
-
-                      <p class="children-amount my-0 text-center"></p>
-
-                      <button type="button" id="add-child"
-                        class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
-                        onclick="addAmount('add-children')">
-                        <i data-feather="plus"></i>
-                      </button>
+  
+                    <hr class="m-0" />
+  
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="my-0">Children</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Childrens / Room</p>
+                      </div>
+  
+                      <div class="increment-decrement d-flex align-items-center column-gap-3">
+                        <button type="button" id="minus-child"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-children')" disabled>
+                          <i data-feather="minus"></i>
+                        </button>
+  
+                        <p class="children-amount my-0 text-center"></p>
+  
+                        <button type="button" id="add-child"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-children')">
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+  
+              <!-- Input For Room -->
+              <input type="hidden" name="room" />
+  
+              <!-- Input For Adult -->
+              <input type="hidden" name="adult" />
+  
+              <!-- Input For Children-->
+              <input type="hidden" name="children" />
             </div>
-
-            <!-- Input For Room -->
-            <input type="hidden" name="room" />
-
-            <!-- Input For Adult -->
-            <input type="hidden" name="adult" />
-
-            <!-- Input For Children-->
-            <input type="hidden" name="children" />
           </div>
         </div>
-      </div>
-
-      <!-- <div class="col-12 col-lg">
-        <div class="form-group promo-container">
-          <label for="promo">Promo Code</label>
-          <div class="position-relative mt-2">
-            <i data-feather="edit" class="text-primary promo-icon"></i>
-            <input type="text" name="promo" id="promo" class="form-control" placeholder="Promo Code" />
+  
+        <!-- <div class="col-12 col-lg">
+          <div class="form-group promo-container">
+            <label for="promo">Promo Code</label>
+            <div class="position-relative mt-2">
+              <i data-feather="edit" class="text-primary promo-icon"></i>
+              <input type="text" name="promo" id="promo" class="form-control" placeholder="Promo Code" />
+            </div>
           </div>
+        </div> -->
+  
+        <div class="col-12 col-lg-2">
+          <button type="button" id="view-button" class="btn w-100 btn-dark rounded-0 fw-bold text-primary py-3">
+            View
+          </button>
         </div>
-      </div> -->
-
-      <div class="col-12 col-lg-2">
-        <button type="button" id="view-button" class="btn w-100 btn-dark rounded-0 fw-bold text-primary">
-          View
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   </section>
   <!-- End Hero-->
 
+  <!-- Start Reservation For Mobile-->
+  <section class="reservation-form d-lg-none">
+    <div class="container">
+      <form action="" class="card row flex-lg-row align-items-center rounded-0 px-3 py-4 mt-5 row-gap-4">
+        <div class="col-12 col-lg">
+          <div class="location-container form-group">
+            <label for="location">Location</label>
+  
+            <div class="position-relative mt-1">
+              <i data-feather="briefcase" class="text-primary"></i>
+              <select class="location">
+                <option value="" disabled selected>Location</option>
+                <optgroup label="Jakarta" disabled>
+                  <option value="Hotel Mulia Senayan">
+                    Hotel Mulia Senayan
+                  </option>
+                  <option value="2">Suites at Hotel Mulia</option>
+                </optgroup>
+  
+                <optgroup label="Bali" disabled>
+                  <option value="The Mulia">The Mulia</option>
+                  <option value="Mulia Resort">Mulia Resort</option>
+                  <option value="Mulia Villa">Mulia Villa</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-lg">
+          <div class="date-container form-group">
+            <label for="location">Date</label>
+  
+            <div class="position-relative mt-2">
+              <i data-feather="calendar" class="date-icon text-primary"></i>
+              <input type="text" id="datepicker" placeholder="Select date" class="form-control" />
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-lg">
+          <div class="room-container form-group">
+            <label for="location">Rooms and Guests</label>
+  
+            <div class="position-relative mt-2">
+              <i data-feather="users" class="room-guest-icon text-primary"></i>
+              <i data-feather="chevron-down" class="chevron-down"></i>
+  
+              <div class="dropdown">
+                <div id="total-place" class="position-relative form-control" type="button" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside" aria-expanded="false">
+                  <span class="total-room"></span>
+                  <span class="room">Room</span>
+                  <span class="rooms d-none">Rooms</span>
+                  ,
+                  <span class="total-adult"></span>
+                  <span class="adult">Adult</span>
+                  <span class="adults d-none">Adults</span>
+                  <span class="total-children d-none"></span>
+                  <span class="children d-none">Child</span>
+                  <span class="childrens d-none">Childs</span>
+                </div>
+  
+                <div class="dropdown-menu w-100 p-5" data-bs-autoClose="inside">
+                  <p class="my-0">Room, Adult, Child</p>
+  
+                  <div class="d-flex flex-column row-gap-3 mt-5">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="my-0">Room</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Rooms / Person</p>
+                      </div>
+  
+                      <div class="increment-decrement d-flex align-items-center column-gap-3">
+                        <button type="button" id="minus-room"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-room')" disabled>
+                          <i data-feather="minus"></i>
+                        </button>
+  
+                        <p class="room-amount my-0 text-center"></p>
+  
+                        <button type="button" id="add-room"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-room')">
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
+                    </div>
+  
+                    <hr class="m-0" />
+  
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="my-0">Adult</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Adults / Room</p>
+                      </div>
+  
+                      <div class="increment-decrement d-flex align-items-center column-gap-3">
+                        <button type="button" id="minus-adult"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-adult')" disabled>
+                          <i data-feather="minus"></i>
+                        </button>
+  
+                        <p class="adult-amount my-0 text-center"></p>
+  
+                        <button type="button" id="add-adult"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-adult')">
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
+                    </div>
+  
+                    <hr class="m-0" />
+  
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="my-0">Children</p>
+                        <p class="my-0 fw-light fs-7">Max 4 Childrens / Room</p>
+                      </div>
+  
+                      <div class="increment-decrement d-flex align-items-center column-gap-3">
+                        <button type="button" id="minus-child"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="minusAmount('minus-children')" disabled>
+                          <i data-feather="minus"></i>
+                        </button>
+  
+                        <p class="children-amount my-0 text-center"></p>
+  
+                        <button type="button" id="add-child"
+                          class="btn p-0 d-flex align-items-center justify-content-center rounded-circle"
+                          onclick="addAmount('add-children')">
+                          <i data-feather="plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Input For Room -->
+              <input type="hidden" name="room" />
+  
+              <!-- Input For Adult -->
+              <input type="hidden" name="adult" />
+  
+              <!-- Input For Children-->
+              <input type="hidden" name="children" />
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div class="col-12 col-lg">
+          <div class="form-group promo-container">
+            <label for="promo">Promo Code</label>
+            <div class="position-relative mt-2">
+              <i data-feather="edit" class="text-primary promo-icon"></i>
+              <input type="text" name="promo" id="promo" class="form-control" placeholder="Promo Code" />
+            </div>
+          </div>
+        </div> -->
+  
+        <div class="col-12 col-lg-2">
+          <button type="button" id="view-button" class="btn w-100 btn-dark rounded-0 fw-bold text-primary py-3">
+            View
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- End Reservation For Mobile-->
+
   <!-- Start About -->
   <section class="mt-8 px-4 px-lg-9">
-    <h2 class="font-serif text-center">The Perfect Place For You To Stay</h2>
-    <p class="text-center mt-4 fs-4">
-      Whether you're a business traveler exploring Jakarta or seeking to
-      indulge in luxury at our exquisite beachfront accommodation in Nusa Dua,
-      Bali, our exclusive hotel promotions await, promising unforgettable
-      experiences with our array of room deals and vacation packages.
-    </p>
-
-    <!-- Start Carousel -->
-    <div class="swiper hotel-image my-8">
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img src="./images/carousel-1.png" alt="Image 1" class="object-fit-cover" width="100%" height="600" />
+    <div class="container">
+      <h2 class="font-serif text-center">The Perfect Place For You To Stay</h2>
+      <p class="text-center mt-4 fs-4">
+        Whether you're a business traveler exploring Jakarta or seeking to
+        indulge in luxury at our exquisite beachfront accommodation in Nusa Dua,
+        Bali, our exclusive hotel promotions await, promising unforgettable
+        experiences with our array of room deals and vacation packages.
+      </p>
+  
+      <!-- Start Carousel -->
+      <div class="swiper hotel-image my-8">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./images/carousel-1.png" alt="Image 1" class="object-fit-cover" width="100%" height="600" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/carousel-2.png" alt="Image 2" class="object-fit-cover" width="100%" height="600" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/carousel-3.png" alt="Image 3" class="object-fit-cover" width="100%" height="600" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/carousel-4.png" alt="Image 4" class="object-fit-cover" width="100%" height="600" />
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img src="./images/carousel-2.png" alt="Image 2" class="object-fit-cover" width="100%" height="600" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./images/carousel-3.png" alt="Image 3" class="object-fit-cover" width="100%" height="600" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./images/carousel-4.png" alt="Image 4" class="object-fit-cover" width="100%" height="600" />
-        </div>
+  
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      <!-- End Carousel -->
     </div>
-    <!-- End Carousel -->
   </section>
   <!-- End About -->
 
   <!-- Start Hotel Branch-->
-  <div class="d-flex flex-column row-gap-8 mt-8 px-4 px-lg-9">
-    <section class="d-flex flex-column flex-md-row align-items-lg-center row-gap-4">
-      <div class="col-12 col-md-5">
-        <img id="jakarta-image" src="./images/jakarta-1.png" alt="Mulia Jakarta" class="img-fluid" width="476"
-          height="564" />
-      </div>
-
-      <div class="col-12 col-md-7 d-flex align-items-center">
-        <div class="w-75 ps-md-6 ps-lg-8 flex-grow-1 flex-lg-grow-0">
-          <h2 class="fs-3 font-serif">The Mulia Jakarta</h2>
-          <p class="mt-4 fs-4">
-            Located in the heart of Jakarta, Hotel Mulia Senayan brings luxury
-            accommodation to the next level. This Jakarta hotel offers the
-            ultimate grand experience with its Suites, featuring a 24-hour
-            on-call butler to take care of your every need
-          </p>
-
-          <a href="#" id="mulia-jakarta"
-            class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-8 fs-4 text-black font-serif text-decoration-none"
-            onmouseover="changeBranchImage('jakarta-image', 'jakarta-2.png')"
-            onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')">
-            Hotel Mulia Senayan
-
-            <i class="d-none text-primary" data-feather="chevron-right"></i>
-          </a>
-
-          <hr class="branch-separator m-0" />
-
-          <a href="#" id="suites-hotel-mulia"
-            class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-4 fs-4 text-black font-serif text-decoration-none"
-            onmouseover="changeBranchImage('jakarta-image', 'jakarta-3.png')"
-            onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')">
-            Suites at Hotel Mulia
-
-            <i class="d-none text-primary" data-feather="chevron-right"></i>
-          </a>
-
-          <a href="#" class="view-more-hotel mt-lg-7" onmouseover="changeBranchImage('jakarta-image', 'jakarta-2.png')"
-            onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')">View More</a>
+  <div class="mt-8 px-4 px-lg-9">
+    <div class="container d-flex flex-column row-gap-8">
+      <section class="d-flex flex-column flex-md-row align-items-lg-center row-gap-4">
+        <div class="col-12 col-md-5">
+          <img id="jakarta-image" src="./images/jakarta-1.png" alt="Mulia Jakarta" class="img-fluid" width="476"
+            height="564" />
         </div>
-      </div>
-    </section>
-
-    <section class="d-flex flex-column flex-md-row align-items-lg-center row-gap-4">
-      <div class="col-12 col-md-7 pr-lg-8 d-flex align-items-center order-2 order-md-1">
-        <div class="w-75 flex-grow-1 flex-lg-grow-0 pe-md-6 pe-lg-0">
-          <h2 class="fs-3 font-serif">The Mulia Bali</h2>
-          <p class="mt-4 fs-4">
-            The Mulia Bali is the epitome of luxury, offering world class
-            amenities with unparalleled service and attention to detail. Our
-            expansive beachfront resort compound, located within the exclusive
-            area of Nusa Dua on the southern part of the island, allows you to
-            choose from three distinct experiences - luxurious suites, serene
-            villas and elegant rooms - overlooking the resort’s infinity pools
-            and pristine beach, inviting you to relax and indulge in paradise.
-          </p>
-
-          <a href="#" id="mulia-resort"
-            class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-8 fs-4 text-black font-serif text-decoration-none"
-            onmouseover="changeBranchImage('bali-image', 'bali-2.png')"
-            onmouseleave="changeBranchImage('bali-image', 'bali-1.png')">
-            Mulia Resort
-
-            <i class="d-none text-primary" data-feather="chevron-right"></i>
-          </a>
-
-          <hr class="branch-separator m-0" />
-
-          <a href="#" id="mulia-villa"
-            class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-4 fs-4 text-black font-serif text-decoration-none"
-            onmouseover="changeBranchImage('bali-image', 'bali-3.png')"
-            onmouseleave="changeBranchImage('bali-image', 'bali-1.png')">
-            Mulia Villa
-
-            <i class="d-none text-primary" data-feather="chevron-right"></i>
-          </a>
-
-          <a href="#" class="view-more-hotel mt-lg-7" onmouseover="changeBranchImage('bali-image', 'bali-4.png')"
-            onmouseleave="changeBranchImage('bali-image', 'bali-1.png')">View More</a>
+  
+        <div class="col-12 col-md-7 d-flex align-items-center">
+          <div class="w-75 ps-md-6 ps-lg-8 flex-grow-1 flex-lg-grow-0">
+            <h2 class="fs-3 font-serif">The Mulia Jakarta</h2>
+            <p class="mt-4 fs-4">
+              Located in the heart of Jakarta, Hotel Mulia Senayan brings luxury
+              accommodation to the next level. This Jakarta hotel offers the
+              ultimate grand experience with its Suites, featuring a 24-hour
+              on-call butler to take care of your every need
+            </p>
+  
+            <a href="#" id="mulia-jakarta"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-8 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('jakarta-image', 'jakarta-2.png')"
+              onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')">
+              Hotel Mulia Senayan
+  
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+  
+            <hr class="branch-separator m-0" />
+  
+            <a href="#" id="suites-hotel-mulia"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-4 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('jakarta-image', 'jakarta-3.png')"
+              onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')">
+              Suites at Hotel Mulia
+  
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+  
+            <a href="#" class="view-more-hotel mt-lg-7" onmouseover="changeBranchImage('jakarta-image', 'jakarta-2.png')"
+              onmouseout="changeBranchImage('jakarta-image', 'jakarta-1.png')">View More</a>
+          </div>
         </div>
-      </div>
+      </section>
+  
+      <section class="d-flex flex-column flex-md-row align-items-lg-center row-gap-4">
+        <div class="col-12 col-md-7 pr-lg-8 d-flex align-items-center order-2 order-md-1">
+          <div class="w-75 flex-grow-1 flex-lg-grow-0 pe-md-6 pe-lg-0">
+            <h2 class="fs-3 font-serif">The Mulia Bali</h2>
+            <p class="mt-4 fs-4">
+              The Mulia Bali is the epitome of luxury, offering world class
+              amenities with unparalleled service and attention to detail. Our
+              expansive beachfront resort compound, located within the exclusive
+              area of Nusa Dua on the southern part of the island, allows you to
+              choose from three distinct experiences - luxurious suites, serene
+              villas and elegant rooms - overlooking the resort’s infinity pools
+              and pristine beach, inviting you to relax and indulge in paradise.
+            </p>
+  
+            <a href="#" id="mulia-resort"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-8 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('bali-image', 'bali-2.png')"
+              onmouseleave="changeBranchImage('bali-image', 'bali-1.png')">
+              Mulia Resort
+  
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+  
+            <hr class="branch-separator m-0" />
+  
+            <a href="#" id="mulia-villa"
+              class="hotel-branch-item d-flex align-items-lg-center justify-content-between mt-4 fs-4 text-black font-serif text-decoration-none"
+              onmouseover="changeBranchImage('bali-image', 'bali-3.png')"
+              onmouseleave="changeBranchImage('bali-image', 'bali-1.png')">
+              Mulia Villa
+  
+              <i class="d-none text-primary" data-feather="chevron-right"></i>
+            </a>
+  
+            <a href="#" class="view-more-hotel mt-lg-7" onmouseover="changeBranchImage('bali-image', 'bali-4.png')"
+              onmouseleave="changeBranchImage('bali-image', 'bali-1.png')">View More</a>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-5 order-1 order-md-2">
+          <img id="bali-image" src="./images/bali-1.png" alt="Mulia Bali" width="480" height="564" />
+        </div>
+      </section>
 
-      <div class="col-12 col-md-5 order-1 order-md-2">
-        <img id="bali-image" src="./images/bali-1.png" alt="Mulia Bali" width="480" height="564" />
-      </div>
-    </section>
+    </div>
   </div>
   <!-- End Hotel Branch-->
 
   <!-- Start Hotel Restaurant-->
-  <section class="mt-8 px-4 px-lg-9">
-    <h2 class="fs-2 font-serif text-center">Taste Amazing Culinary At The Mulia</h2>
-    <p class="text-center fs-4">Enjoy delicious culinary from quality ingredients in a luxurious atmosphere at The Mulia
-      Nusa Dua and Jakarta.</p>
-
-    <div class="row flex-column flex-md-row row-gap-4">
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/jakarta/thecafe" target="_blank" class="w-100">
-          <img src="./images/the-cafe.webp" alt="The Cafe Jakarta" class="img-fluid w-100" width="305" height="305">
-        </a>
-
-        <h3 class="font-serif fs-4 mt-4 mb-1">
-          <a href="https://muliadining.com/jakarta/thecafe" target="_blank" class="text-decoration-none text-dark">The
-            Cafe</a>
-        </h3>
-        <p class="m-0 text-secondary">International Cuisine</p>
+  <section class="bg-black mt-8 px-4 px-lg-9 text-white py-8">
+    <div class="container">
+      <h2 class="fs-2 font-serif text-center text-primary">Taste Amazing Culinary At The Mulia</h2>
+      <p class="text-center fs-4 mb-7">Enjoy delicious culinary from quality ingredients in a luxurious atmosphere at The Mulia
+        Nusa Dua and Jakarta.</p>
+  
+      <div class="row flex-column flex-md-row row-gap-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="https://muliadining.com/jakarta/thecafe" target="_blank" class="w-100">
+              <img src="./images/the-cafe.webp" alt="The Cafe Jakarta" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1">
+              <a href="https://muliadining.com/jakarta/thecafe" target="_blank" class="text-decoration-none text-primary">The
+                Cafe</a>
+            </h3>
+            <p class="m-0 text-white">International Cuisine</p>
+          </div>
+            
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="https://muliadining.com/jakarta/Table8" target="_blank" class="w-100">
+              <img src="./images/table-8.webp" alt="Table8 Jakarta" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1">
+              <a href="https://muliadining.com/jakarta/Table8" target="_blank"
+                class="text-decoration-none text-primary">Table8</a>
+            </h3>
+            <p class="m-0 text-white">Chinese Cuisine</p>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="https://muliadining.com/bali/cascadelounge" target="_blank" class="w-100">
+              <img src="./images/cascade-lounge.webp" alt="Cascade Lounge Bali" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1 text-primary">
+              <a href="https://muliadining.com/bali/cascadelounge" target="_blank"
+                class="text-decoration-none text-primary">Cascade Lounge</a>
+            </h3>
+            <p class="m-0 text-white">Cocktails & High Tea</p>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="#" target="_blank" class="w-100">
+              <img src="./images/soleil.webp" alt="Soleil Bali" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1">
+              <a href="https://muliadining.com/bali/soleil" target="_blank"
+                class="text-decoration-none text-primary">Soleil</a>
+            </h3>
+            <p class="m-0 text-white">Mediterranean Cuisine</p>
+          </div>
+        </div>
       </div>
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/jakarta/Table8" target="_blank" class="w-100">
-          <img src="./images/table-8.webp" alt="Table8 Jakarta" class="img-fluid w-100" width="305" height="305">
-        </a>
-
-        <h3 class="font-serif fs-4 mt-4 mb-1">
-          <a href="https://muliadining.com/jakarta/Table8" target="_blank"
-            class="text-decoration-none text-dark">Table8</a>
-        </h3>
-        <p class="m-0 text-secondary">Chinese Cuisine</p>
+  
+      <div class="d-flex justify-content-center mt-3">
+        <a href="https://muliadining.com/#homePage" target="_blank"
+          class="explore-all-restaurant btn border-primary text-primary rounded-0 mt-3 d-inline-block mx-auto text-decoration-none fw-bold ox-6">Explore All
+          Restaurants</a>
       </div>
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/bali/cascadelounge" target="_blank" class="w-100">
-          <img src="./images/cascade-lounge.webp" alt="Cascade Lounge Bali" class="img-fluid w-100" width="305" height="305">
-        </a>
-
-        <h3 class="font-serif fs-4 mt-4 mb-1">
-          <a href="https://muliadining.com/bali/cascadelounge" target="_blank"
-            class="text-decoration-none text-dark">Cascade Lounge</a>
-        </h3>
-        <p class="m-0 text-secondary">Cocktails & High Tea</p>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://muliadining.com/bali/soleil" target="_blank" class="w-100">
-          <img src="./images/soleil.webp" alt="Soleil Bali" class="img-fluid w-100" width="305" height="305">
-        </a>
-
-        <h3 class="font-serif fs-4 mt-4 mb-1">
-          <a href="https://muliadining.com/bali/soleil" target="_blank"
-            class="text-decoration-none text-dark">Soleil</a>
-        </h3>
-        <p class="m-0 text-secondary">Mediterranean Cuisine</p>
-      </div>
-    </div>
-
-    <div class="d-flex justify-content-center mt-3">
-      <a href="https://muliadining.com/#homePage" target="_blank"
-        class="explore-all-restaurant btn border-dark rounded-0 mt-3 d-inline-block mx-auto text-decoration-none fw-bold">Explore All
-        Restaurants</a>
     </div>
   </section>
   <!-- End Hotel Restaurant-->
 
   <!-- Start Event-->
   <section class="mt-8 px-4 px-lg-9">
-    <h2 class="fs-2 font-serif text-center">Make Your Event With Us</h2>
-    <p class="text-center fs-4">We offer a place, facilities, and also a luxurious and excellent service for your event
-      needs</p>
-
-    <div class="swiper swiper-event my-8">
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="position-relative">
-            <img src="./images/wedding-event.webp" alt="Wedding Event"
-              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
-
-            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
-              <h3 class="pb-3 font-serif fs-3">Wedding</h3>
-              <p class="mt-5 flex-grow-1">Create a cherished and unforgettable memory on your wedding day, surrounded by your
-                beloved
-                partner, cherished family, and dear friends at The Mulia. With stunning venues and exquisite
-                decorations,
-                culinary delights crafted to perfection to delight your guests, and our unwavering commitment to quality
-                service, your wedding celebration will be truly unforgettable.
-
-                <br />
-                <br />
-
-                Let us make your dream wedding a reality at The Mulia.
-              </p>
-
-              <a href="#"
-                class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
+    <div class="container">
+      <h2 class="fs-2 font-serif text-center">Make Your Event With Us</h2>
+      <p class="text-center fs-4">We offer a place, facilities, and also a luxurious and excellent service for your event
+        needs</p>
+  
+      <div class="swiper swiper-event my-8">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="position-relative">
+              <img src="./images/wedding-event.webp" alt="Wedding Event"
+                class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
+  
+              <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
+                <h3 class="pb-3 font-serif fs-3">Wedding</h3>
+                <p class="mt-5 flex-grow-1">Create a cherished and unforgettable memory on your wedding day, surrounded by your
+                  beloved
+                  partner, cherished family, and dear friends at The Mulia. With stunning venues and exquisite
+                  decorations,
+                  culinary delights crafted to perfection to delight your guests, and our unwavering commitment to quality
+                  service, your wedding celebration will be truly unforgettable.
+  
+                  <br />
+                  <br />
+  
+                  Let us make your dream wedding a reality at The Mulia.
+                </p>
+  
+                <a href="#"
+                  class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
+              </div>
+  
+              <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
+                <img src="./images/ring.svg" alt="Wedding Icon" width="80" height="80">
+              </div>
             </div>
-
-            <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
-              <img src="./images/ring.svg" alt="Wedding Icon" width="80" height="80">
+          </div>
+  
+          <div class="swiper-slide">
+            <div class="position-relative">
+              <img src="./images/meeting-event.webp" alt="Meeting Event"
+                class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
+  
+              <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
+                <h3 class="pb-3 font-serif fs-3">Meeting</h3>
+                <p class="mt-5 flex-grow-1">Host your next meeting at The Mulia, where luxury meets functionality. Our spacious and
+                  elegant facilities are tailored to accommodate your needs, providing an exquisite setting for productive
+                  gatherings. Experience our unparalleled commitment to excellence as our dedicated team ensures that
+                  every
+                  detail is meticulously taken care of, allowing you to focus on what truly matters – a successful and
+                  impactful meeting.
+  
+                  <br />
+                  <br />
+  
+                  Elevate your meeting experience with The Mulia.
+                </p>
+  
+                <a href="#"
+                  class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
+              </div>
+  
+              <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
+                <i data-feather="users" class="text-primary"></i>
+              </div>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <div class="position-relative">
+              <img src="./images/seminar-event.webp" alt="Seminar Event"
+                class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
+  
+              <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
+                <h3 class="pb-3 font-serif fs-3">Seminar / Conference</h3>
+                <p class="mt-5 flex-grow-1">Enhance your seminar with our luxurious and spacious facilities. With ample room capacity,
+                  we offer the perfect venue to accommodate large gatherings, ensuring a professional and comfortable
+                  experience for all participants.
+  
+                  <br />
+                  <br />
+  
+  
+                  Choose excellence for your event at our distinguished venue with The Mulia
+                </p>
+  
+                <a href="#"
+                  class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
+              </div>
+  
+              <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
+                <i data-feather="star" class="text-primary"></i>
+              </div>
+            </div>
+          </div>
+  
+          <div class="swiper-slide">
+            <div class="position-relative">
+              <img src="./images/private-event.webp" alt="Private Event"
+                class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
+  
+              <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
+                <h3 class="pb-3 font-serif fs-3">Private Events</h3>
+                <p class="mt-5 flex-grow-1">Celebrate special moments with loved ones with The Mulia. From birthday parties, prom
+                  nights, family events, and other events. At The Mulia you will get luxurious and large facilities to
+                  support your event. As well as delicious culinary offerings, decorations that beautify your event, and
+                  our quality services for your event
+                </p>
+  
+                <a href="#"
+                  class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
+              </div>
+  
+              <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
+                <i data-feather="gift" class="text-primary"></i>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="position-relative">
-            <img src="./images/meeting-event.webp" alt="Meeting Event"
-              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
-
-            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
-              <h3 class="pb-3 font-serif fs-3">Meeting</h3>
-              <p class="mt-5 flex-grow-1">Host your next meeting at The Mulia, where luxury meets functionality. Our spacious and
-                elegant facilities are tailored to accommodate your needs, providing an exquisite setting for productive
-                gatherings. Experience our unparalleled commitment to excellence as our dedicated team ensures that
-                every
-                detail is meticulously taken care of, allowing you to focus on what truly matters – a successful and
-                impactful meeting.
-
-                <br />
-                <br />
-
-                Elevate your meeting experience with The Mulia.
-              </p>
-
-              <a href="#"
-                class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
-            </div>
-
-            <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
-              <i data-feather="users" class="text-primary"></i>
-            </div>
+  
+        <div class="d-flex align-items-center mt-5 column-gap-4">
+          <div class="swiper-button-prev position-static m-0">
+            <i data-feather="chevron-left" class="text-dark"></i>
           </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="position-relative">
-            <img src="./images/seminar-event.webp" alt="Seminar Event"
-              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
-
-            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
-              <h3 class="pb-3 font-serif fs-3">Seminar / Conference</h3>
-              <p class="mt-5 flex-grow-1">Enhance your seminar with our luxurious and spacious facilities. With ample room capacity,
-                we offer the perfect venue to accommodate large gatherings, ensuring a professional and comfortable
-                experience for all participants.
-
-                <br />
-                <br />
-
-
-                Choose excellence for your event at our distinguished venue with The Mulia
-              </p>
-
-              <a href="#"
-                class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
-            </div>
-
-            <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
-              <i data-feather="star" class="text-primary"></i>
-            </div>
+          <div class="swiper-scrollbar m-0"></div>
+          <div class="swiper-button-next position-static m-0">
+            <i data-feather="chevron-right" class="text-dark"></i>
           </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="position-relative">
-            <img src="./images/private-event.webp" alt="Private Event"
-              class="event-image position-relative d-block ms-lg-6 mt-9 mt-lg-6" width="494" height="590" />
-
-            <div class="event-box d-flex flex-column align-items-start bg-white pt-4 px-md-8 py-md-8 position-absolute">
-              <h3 class="pb-3 font-serif fs-3">Private Events</h3>
-              <p class="mt-5 flex-grow-1">Celebrate special moments with loved ones with The Mulia. From birthday parties, prom
-                nights, family events, and other events. At The Mulia you will get luxurious and large facilities to
-                support your event. As well as delicious culinary offerings, decorations that beautify your event, and
-                our quality services for your event
-              </p>
-
-              <a href="#"
-                class="d-inline-block bg-primary text-black text-decoration-none px-8 py-2 mt-5 fw-bold">Details</a>
-            </div>
-
-            <div class="event-icon d-flex align-items-center justify-content-center position-absolute top-0">
-              <i data-feather="gift" class="text-primary"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex align-items-center mt-5 column-gap-4">
-        <div class="swiper-button-prev position-static m-0">
-          <i data-feather="chevron-left" class="text-dark"></i>
-        </div>
-        <div class="swiper-scrollbar m-0"></div>
-        <div class="swiper-button-next position-static m-0">
-          <i data-feather="chevron-right" class="text-dark"></i>
         </div>
       </div>
     </div>
   </section>
   <!-- End Event-->
+
+  <!-- Start Hotel Event & Promotion-->
+  <section id="event-promotion" class="bg-black mt-8 px-4 px-lg-9 text-white py-8">
+    <div class="container">
+      <h2 class="fs-2 font-serif text-center text-primary">Our Events & Promotions</h2>
+  
+      <div class="row flex-column flex-md-row row-gap-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="#" target="_blank" class="w-100">
+              <img src="./images/event-1.webp" alt="Platinum Privileges for Amex Cardholders" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1">
+              <a href="#" target="_blank" class="text-decoration-none text-primary">Platinum Privileges for Amex Cardholders</a>
+            </h3>
+            <p class="mt-2 mb-0 text-white">Exclusive 'Stay 3 Pay 2' deal includes daily breakfast for two and dining credit worth IDR 500,000 with The Platinum Card®</p>
+          </div>
+            
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="#" target="_blank" class="w-100">
+              <img src="./images/event-2.webp" alt="School Holiday Escape" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1">
+              <a href="#" target="_blank"
+                class="text-decoration-none text-primary">School Holiday Escape</a>
+            </h3>
+            <p class="mt-2 mb-0 text-white">Embrace the extraordinary with our offer. Book now and secure your stay between 24 June until 15 July 2024  </p>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="#" target="_blank" class="w-100">
+              <img src="./images/event-3.webp" alt="Cascade Lounge Bali" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1 text-primary">
+              <a href="https://muliadining.com/bali/cascadelounge" target="_blank"
+                class="text-decoration-none text-primary">Cascade Lounge</a>
+            </h3>
+            <p class="mt-2 mb-0 text-white">Immerse yourself in enchanting evening "Sunset Flow by The Sea" on Saturday, 20 July 2024</p>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="border-bottom border-primary pb-6">
+            <a href="#" target="_blank" class="w-100">
+              <img src="./images/soleil.webp" alt="Gourmet Wonders" class="img-fluid w-100" width="305" height="305">
+            </a>
+    
+            <h3 class="font-serif fs-4 mt-4 mb-1">
+              <a href="#" target="_blank"
+                class="text-decoration-none text-primary">Gourmet Wonders</a>
+            </h3>
+            <p class="m-0 text-white">Choose our full or half-board packages, including daily breakfast, lunch, and/or dinner for two, with no min stay required</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-center mt-3">
+        <a href="#" target="_blank"
+          class="explore-all-restaurant btn border-primary text-primary rounded-0 mt-3 d-inline-block mx-auto text-decoration-none fw-bold ox-6">See Other Event & Promotion</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hotel Event & Promotion-->
 
   <!-- Start Footer -->
   <footer class="border-top py-6">
@@ -669,7 +946,9 @@
     });
 
     let option = { placeholder: "Location" };
-    NiceSelect.bind(document.querySelector(".location"), option);
+    document.querySelectorAll('.location').forEach(element => {
+      NiceSelect.bind(element, option);
+    });
 
     // Create Date Picker
     flatpickr("#datepicker", {
@@ -1003,11 +1282,6 @@
         .getElementById(image)
         .setAttribute("src", "./images/" + imageFile);
     }
-
-    // Simulate Loading
-    setTimeout(() => {
-      document.querySelector('.loading-container').classList.add('hide')
-    }, 2000);
   </script>
 </body>
 

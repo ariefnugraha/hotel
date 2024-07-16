@@ -13634,74 +13634,75 @@ textarea.form-control-lg {
 }
 
 .hero {
-  height: 500px;
-  background: url("../images/Hero.png") no-repeat;
+  height: 700px;
+  background: url("../images/hero.webp") no-repeat;
   background-size: cover;
 }
-.hero form .form-control {
+
+.reservation-form .form-control {
   padding: 0.75rem 1rem 0.75rem 3rem;
 }
-.hero form select.location {
+.reservation-form select.location {
   display: none;
 }
-.hero form .location li:hover, .hero form .location li:focus, .hero form .location li.selected.focus {
+.reservation-form .location li:hover, .reservation-form .location li:focus, .reservation-form .location li.selected.focus {
   background: #d7b865;
 }
-.hero form .location li.optgroup {
+.reservation-form .location li.optgroup {
   background: transparent !important;
 }
-.hero form .location li:first-child {
+.reservation-form .location li:first-child {
   display: none;
 }
-.hero form .location li.optgroup {
+.reservation-form .location li.optgroup {
   color: #202020;
   padding: 0 1rem;
 }
-.hero form div:not(.increment-decrement) .location-container svg,
-.hero form div:not(.increment-decrement) .date-container svg,
-.hero form div:not(.increment-decrement) .room-container svg,
-.hero form div:not(.increment-decrement) .promo-container svg {
+.reservation-form div:not(.increment-decrement) .location-container svg,
+.reservation-form div:not(.increment-decrement) .date-container svg,
+.reservation-form div:not(.increment-decrement) .room-container svg,
+.reservation-form div:not(.increment-decrement) .promo-container svg {
   position: absolute;
   left: 1rem;
   top: 50%;
   transform: translateY(30%);
   z-index: 1;
 }
-.hero form div:not(.increment-decrement) .location-container svg.date-icon, .hero form div:not(.increment-decrement) .location-container svg.room-guest-icon, .hero form div:not(.increment-decrement) .location-container svg.promo-icon,
-.hero form div:not(.increment-decrement) .date-container svg.date-icon,
-.hero form div:not(.increment-decrement) .date-container svg.room-guest-icon,
-.hero form div:not(.increment-decrement) .date-container svg.promo-icon,
-.hero form div:not(.increment-decrement) .room-container svg.date-icon,
-.hero form div:not(.increment-decrement) .room-container svg.room-guest-icon,
-.hero form div:not(.increment-decrement) .room-container svg.promo-icon,
-.hero form div:not(.increment-decrement) .promo-container svg.date-icon,
-.hero form div:not(.increment-decrement) .promo-container svg.room-guest-icon,
-.hero form div:not(.increment-decrement) .promo-container svg.promo-icon {
+.reservation-form div:not(.increment-decrement) .location-container svg.date-icon, .reservation-form div:not(.increment-decrement) .location-container svg.room-guest-icon, .reservation-form div:not(.increment-decrement) .location-container svg.promo-icon,
+.reservation-form div:not(.increment-decrement) .date-container svg.date-icon,
+.reservation-form div:not(.increment-decrement) .date-container svg.room-guest-icon,
+.reservation-form div:not(.increment-decrement) .date-container svg.promo-icon,
+.reservation-form div:not(.increment-decrement) .room-container svg.date-icon,
+.reservation-form div:not(.increment-decrement) .room-container svg.room-guest-icon,
+.reservation-form div:not(.increment-decrement) .room-container svg.promo-icon,
+.reservation-form div:not(.increment-decrement) .promo-container svg.date-icon,
+.reservation-form div:not(.increment-decrement) .promo-container svg.room-guest-icon,
+.reservation-form div:not(.increment-decrement) .promo-container svg.promo-icon {
   transform: translateY(-50%);
 }
-.hero form div:not(.increment-decrement) .location-container svg.chevron-down,
-.hero form div:not(.increment-decrement) .date-container svg.chevron-down,
-.hero form div:not(.increment-decrement) .room-container svg.chevron-down,
-.hero form div:not(.increment-decrement) .promo-container svg.chevron-down {
+.reservation-form div:not(.increment-decrement) .location-container svg.chevron-down,
+.reservation-form div:not(.increment-decrement) .date-container svg.chevron-down,
+.reservation-form div:not(.increment-decrement) .room-container svg.chevron-down,
+.reservation-form div:not(.increment-decrement) .promo-container svg.chevron-down {
   left: inherit;
   right: 1rem;
   transform: translateY(-50%);
 }
-.hero form .increment-decrement button {
+.reservation-form .increment-decrement button {
   width: 32px;
   height: 32px;
   border-color: #202020;
   color: #202020;
 }
-.hero form .increment-decrement button:disabled {
+.reservation-form .increment-decrement button:disabled {
   border-color: #C4C4C4;
   color: #C4C4C4;
 }
-.hero form .increment-decrement button svg {
+.reservation-form .increment-decrement button svg {
   position: static !important;
   transform: initial !important;
 }
-.hero form #view-button {
+.reservation-form #view-button {
   width: 160px;
 }
 
@@ -13751,6 +13752,7 @@ textarea.form-control-lg {
 .explore-all-restaurant:hover {
   background-color: #d7b865;
   border-color: #d7b865 !important;
+  color: #202020 !important;
   transition: 0.5s;
 }
 
@@ -13806,59 +13808,14 @@ textarea.form-control-lg {
   height: 30px !important;
 }
 
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  z-index: 9999;
-}
-.loading-container.hide {
-  animation: hide-loading 5s linear;
-  animation-fill-mode: forwards;
-}
-.loading-container .loading-animation {
-  width: 200px;
-  height: 3px;
-  background: #e4e4e4;
-  margin-top: 16px;
-  overflow: hidden;
-}
-.loading-container .loading-animation .loading-animation-child {
-  background: #d7b865;
-  width: 80px;
-  height: 3px;
-  background: #d7b865;
-  animation: loading-progress 3s linear infinite;
-}
-@keyframes loading-progress {
-  0% {
-    transform: translateX(-50px);
-  }
-  100% {
-    transform: translateX(250px);
+@media (min-width: 993px) {
+  #event-promotion h3, #event-promotion .h3 {
+    height: 60px;
   }
 }
-@keyframes hide-loading {
-  0% {
-    transform: none;
-  }
-  100% {
-    transform: translateY(1000%);
-    z-index: -1;
-    display: none;
-  }
-}
-
 @media (max-width: 992px) {
   .hero {
-    height: auto;
+    height: 500px;
   }
   #bali-image {
     width: 100%;
@@ -13883,16 +13840,16 @@ textarea.form-control-lg {
   .hotel-image img {
     height: 300px;
   }
+  .swiper-event .event-image {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .swiper-event .event-box {
     position: static !important;
     transform: initial;
     width: 100%;
     height: auto;
     box-shadow: none;
-  }
-  .swiper-event .event-box img {
-    height: 500px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }/*# sourceMappingURL=custom-style.css.map */

@@ -111,87 +111,88 @@ $font-sizes: (
 
 // Hero Section
 .hero {
-  height: 500px;
-  background: url("../images/Hero.png") no-repeat;
+  height: 700px;
+  background: url("../images/hero.webp") no-repeat;
   background-size: cover;
+}
 
-  form {
-    .form-control {
-      padding: $spacer * 0.75 $spacer $spacer * 0.75 3rem;
-    }
+// Reservation Form
+.reservation-form {
+  .form-control {
+    padding: $spacer * 0.75 $spacer $spacer * 0.75 3rem;
+  }
 
-    select.location {
-      display: none;
-    }
-    .location {
-      li {
-        &:hover,
-        &:focus,
-        &.selected.focus {
-          background: $gold;
-        }
-
-        &.optgroup {
-          background: transparent !important;
-        }
-        &:first-child {
-          display: none;
-        }
-
-        &.optgroup {
-          color: #202020;
-          padding: 0 $spacer;
-        }
+  select.location {
+    display: none;
+  }
+  .location {
+    li {
+      &:hover,
+      &:focus,
+      &.selected.focus {
+        background: $gold;
       }
-    }
 
-    div:not(.increment-decrement) {
-      .location-container,
-      .date-container,
-      .room-container,
-      .promo-container {
-        svg {
-          position: absolute;
-          left: $spacer;
-          top: 50%;
-          transform: translateY(30%);
-          z-index: 1;
-
-          &.date-icon,
-          &.room-guest-icon,
-          &.promo-icon {
-            transform: translateY(-50%);
-          }
-
-          &.chevron-down {
-            left: inherit;
-            right: $spacer;
-            transform: translateY(-50%);
-          }
-        }
+      &.optgroup {
+        background: transparent !important;
       }
-    }
+      &:first-child {
+        display: none;
+      }
 
-    .increment-decrement {
-      button {
-        width: 32px;
-        height: 32px;
-        border-color: #202020;
+      &.optgroup {
         color: #202020;
-        &:disabled {
-          border-color: #C4C4C4;
-          color: #C4C4C4;
+        padding: 0 $spacer;
+      }
+    }
+  }
+
+  div:not(.increment-decrement) {
+    .location-container,
+    .date-container,
+    .room-container,
+    .promo-container {
+      svg {
+        position: absolute;
+        left: $spacer;
+        top: 50%;
+        transform: translateY(30%);
+        z-index: 1;
+
+        &.date-icon,
+        &.room-guest-icon,
+        &.promo-icon {
+          transform: translateY(-50%);
         }
-        svg {
-          position: static !important;
-          transform: initial !important;
+
+        &.chevron-down {
+          left: inherit;
+          right: $spacer;
+          transform: translateY(-50%);
         }
       }
     }
+  }
 
-    #view-button {
-      width: 160px;
+  .increment-decrement {
+    button {
+      width: 32px;
+      height: 32px;
+      border-color: #202020;
+      color: #202020;
+      &:disabled {
+        border-color: #C4C4C4;
+        color: #C4C4C4;
+      }
+      svg {
+        position: static !important;
+        transform: initial !important;
+      }
     }
+  }
+
+  #view-button {
+    width: 160px;
   }
 }
 
@@ -250,6 +251,7 @@ $font-sizes: (
 .explore-all-restaurant:hover {
   background-color: $gold;
   border-color: $gold !important;
+  color: $black !important  ;
   transition: .5s;
 }
 
@@ -311,69 +313,19 @@ $font-sizes: (
   }
 }
 
-// Loading State
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  z-index: 9999;
-
-  &.hide {
-    animation: hide-loading 5s linear;
-    animation-fill-mode: forwards;
-  }
-
-  .loading-animation {
-    width: 200px;
-    height: 3px;
-    background: #e4e4e4;
-    margin-top: 16px;
-    overflow: hidden;
-
-    .loading-animation-child {
-      background: $primary;
-      width: 80px;
-      height: 3px;
-      background: $gold;
-      animation: loading-progress 3s linear infinite;
+// Event Promoton
+@media (min-width: 993px) {
+  #event-promotion {
+    h3 {
+      height: 60px;
     }
   }
-
-  @keyframes loading-progress {
-    0% {
-      transform: translateX(-50px);
-    }
-
-    100% {
-      transform: translateX(250px);
-    }
-  }
-
-  @keyframes hide-loading {
-    0% {
-      transform: none;
-    }
-
-    100% {
-      transform: translateY(1000%);
-      z-index: -1;
-      display:none;
-    }
-  }
-
 }
 
 // Media Query
 @media (max-width: 992px) {
   .hero {
-    height: auto;
+    height: 500px;
   }
 
   #bali-image {
@@ -407,6 +359,10 @@ $font-sizes: (
     }
   }
   .swiper-event {
+    .event-image  {
+      height: 400px;
+      object-fit: cover;
+    }
     .event-box {
       position: static !important;
       transform: initial;
@@ -414,10 +370,6 @@ $font-sizes: (
       height: auto;
       box-shadow: none;
 
-      img {
-        height: 500px;
-        object-fit: cover;
-      }
     }
   }
 }
